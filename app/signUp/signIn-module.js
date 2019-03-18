@@ -11,12 +11,7 @@ angular.module('signInModule', ['ui.bootstrap']).controller('paymentController',
 
   }
 
-  
-  
-
-  //};
   $scope.saveSignUpData = function () {
-   
     $log.info('post-data' + JSON.stringify($scope.paymentDetail));
     $http({
       method: 'POST',
