@@ -7,16 +7,16 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Sign In</h5>
-            <form class="form-signin">
+            <form class="form-signin"  ng-submit="authication()">
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-                  ng-model="loginDetails.email" required autofocus>
-                <label for="inputEmail">Email address</label>
+                <input type="text" id="username" class="form-control" placeholder="user name "
+                  ng-model="loginDetails.userName" required autofocus>
+                <label for="inputEmail">User Name</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <label for="inputPassword" ng-model="loginDetails.email">Password</label>
+                <input type="password" id="inputPassword" ng-model="loginDetails.password" class="form-control" placeholder="Password" required>
+                <label for="inputPassword" >Password</label>
               </div>
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
               <button class="btn btn-lg btn-danger btn-block text-uppercase" type="reset">Reset</button>

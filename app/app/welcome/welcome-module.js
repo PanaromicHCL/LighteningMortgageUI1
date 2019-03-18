@@ -1,5 +1,5 @@
 
-angular.module('welcomeModule', ['ui.bootstrap']).controller('welcomeController', function ($scope, $location, $http, restApiSerivce, $rootScope, $log, $document) {
+angular.module('welcomeModule', ['ui.bootstrap']).controller('welcomeController', function ($scope, $location, $http, $rootScope, $log, $document) {
   //  $scope.baseUrl = 'http://10.117.189.228:8080/api/v1/';
   $scope.welcomeDetails = {
     email: '',
@@ -8,26 +8,6 @@ angular.module('welcomeModule', ['ui.bootstrap']).controller('welcomeController'
   }
 
   $scope.loggedUserDetails = [{
-    "name": "Suresh",
-    "dob": "20/07/1989",
-    "gender": "Male",
-    "phone": "8792791584",
-    "email": "Suresh@gmail.com",
-    "pan": "CPUP98908899898",
-    "salary": "3256535632653265",
-    "secincome": "8792791584",
-    "otherincome": "747645546754675467"
-  }, {
-    "name": "Suresh",
-    "dob": "20/07/1989",
-    "gender": "Male",
-    "phone": "8792791584",
-    "email": "Suresh@gmail.com",
-    "pan": "CPUP98908899898",
-    "salary": "3256535632653265",
-    "secincome": "8792791584",
-    "otherincome": "747645546754675467"
-  }, {
     "name": "Suresh",
     "dob": "20/07/1989",
     "gender": "Male",

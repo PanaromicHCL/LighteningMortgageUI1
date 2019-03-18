@@ -2,7 +2,7 @@
 
 // Declare app level module which depends on views, and core components
 angular.module('petApp', [
-  'ngRoute', 'ui.bootstrap', 'signUpModule' , 'welcomeModule'
+  'ngRoute', 'ui.bootstrap', 'signUpModule' , 'welcomeModule', 'loginModule'
 ]).
   config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
