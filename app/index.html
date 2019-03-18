@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="petApp" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <style>
+    a:hover {
+      color: #0056b3;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="menu hidden">
+    <!-- <li><a href="#!/view1">view1</a></li>
+    <li><a href="#!/view2">view2</a></li>-->
+    <li><a href="#!/signIn" class="text-decoration-none">Home</a></li>
+    <li><a href="#!/userPolicy" class="text-decoration-none">Login</a></li>
+    <li><a href="#!/signUp" class="text-decoration-none">User Registration</a></li>
+    <li><a href="#!/pets" class="text-decoration-none">Pets</a></li>
+    <li><a href="#!/addpet" class="text-decoration-none">Add Pet</a></li>
+
+
+
+  </ul>
+  <!-- Grey with black text -->
+  <nav class="navbar navbar-expand-sm bg-light">
+    <a class="navbar-brand" href="#">Mortgage App</a>
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link" href="#!/login">Login </a>
+      </li>
+      <li><a href="#!/signUp" class="text-decoration-none nav-link">SignUp</a></li>
+
+      <li class="nav-item">
+        <a class="nav-link hidden" href="#!/transctions">Transctions </a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <ng-view></ng-view>
+
+  <div class="hidden"> AngularJS seed app: v<span app-version></span></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="core/version/version.js"></script>
+  <script src="core/version/version-directive.js"></script>
+  <script src="core/version/interpolate-filter.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Latest data table  -->
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+  <script src="signUp/signIn-module.js"></script>
+
+  <script src="payment/signIn-module.js"></script>
+
+
+  <script src="transactions/transctionsModule.js"></script>
+  <script src="common.service/webApi.service.js"></script>
+</body>
+
+</html>

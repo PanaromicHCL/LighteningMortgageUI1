@@ -1,0 +1,62 @@
+<div class="container table-responsive-sm">
+    <h2>All Transactions:</h2>
+    <div class="row">
+        <div class="col">
+         Filter:
+        </div>
+        <div class="col-md-4">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" ng-click="currentTrans('current')" value="current" class="form-check-input"
+                        ng-model="currentTrans" ng-click="currentTrans('current')">Current
+                </label>
+            </div>
+        </div>
+
+
+        <div class="col-md-3 hidden">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optradio">Monthly
+                </label>
+            </div>
+        </div>
+
+        <div class="col-md-4" style="margin-top: 0;">
+            <div class="row">
+            <div class="col-md-7"> <label for="sel1">Select Spend Categories :</label></div>
+            <div class="col-md-5">
+                <select class="form-control" ng-model="paymentDetail.customerId">
+                    <option ng-repeat="spendCategori in spendCategoris" value="{{spendCategori.spendCategoryId}}">
+                        {{spendCategori.spendCategoryName}}
+                    </option>
+                </select>
+            </div>
+</div>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-sm ">
+        <thead>
+            <tr>
+                <th>TransactionId</th>
+                <th>TransactionDescription</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>PaymentType</th>
+                <th>SpendCategory Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="transaction in transactions">
+                <td>{{transaction.transactionId}}</td>
+                <td>{{transaction.transactionDescription}}</td>
+                <td>{{transaction.transactionId}}</td>
+                <td>{{transaction.date | date:'yyyy-MM-dd'}}</td>
+                <td>{{transaction.paymentType}}</td>
+                <td>{{transaction.spendCategoryName}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
