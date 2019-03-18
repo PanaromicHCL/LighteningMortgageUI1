@@ -7,27 +7,27 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">User Registration :</h5>
-            <form class="form-signin">
+            <form ng-submit="saveSignUpData()">
                 <div class="form-label-group">
-                    <input type="password" id="phone" class="form-control" placeholder="Contact Number" required>
-                    <label for="phone" ng-model="signUpDetails.username">User Name</label>
+                    <input type="text"  class="form-control" ng-model="signUpDetails.username" placeholder="Contact Number" required autofocus>
+                    <label  >User Name</label>
                   </div>
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <label for="inputEmail" ng-model="signUpDetails.email">Email address</label>
+                <input type="email"  class="form-control" ng-model="signUpDetails.email" placeholder="Email address" required autofocus>
+                <label  >Email address</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <label for="inputPassword" ng-model="signUpDetails.email">Password</label>
+                <input type="password"  ng-model="signUpDetails.pwd" class="form-control" placeholder="Password" required autofocus>
+                <label >Password</label>
               </div>
 
               <div class="form-label-group">
-                  <input type="password" id="phone" class="form-control" placeholder="Contact Number" required>
-                  <label for="phone" ng-model="signUpDetails.email">Contact phone</label>
+                  <input type="text"  class="form-control"  ng-model="signUpDetails.phone"placeholder="Contact Number" required autofocus>
+                  <label  >Contact phone</label>
                 </div>
                 
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" ng-click="saveSignUpData()" type="submit">Register</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit"  >Register</button>
               <button class="btn btn-lg btn-danger btn-block text-uppercase" type="reset">Reset</button>
 
             </form>

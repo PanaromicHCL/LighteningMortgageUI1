@@ -2,14 +2,14 @@
 
 // Declare app level module which depends on views, and core components
 angular.module('petApp', [
-  'ngRoute', 'ui.bootstrap', 'signInModule' ,'transctionsModule', 'welcomeModule'
+  'ngRoute', 'ui.bootstrap', 'signUpModule' , 'welcomeModule'
 ]).
   config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
     $routeProvider.
       when('/signUp', {
         templateUrl: 'signUp/signIn-template.html',
-        controller: 'paymentController'
+        controller: 'signInController'
       }).when('/login', {
         templateUrl: 'login/login-template.html',
         controller: 'loginController'

@@ -1,29 +1,29 @@
 
-angular.module('signInModule', ['ui.bootstrap']).controller('paymentController', function ($scope, $location, $http, restApiSerivce, $rootScope, $log, $document) {
-  $scope.baseUrl = 'http://10.117.189.228:8080/api/v1/';
+angular.module('signUpModule', ['ui.bootstrap']).controller('signInController', function ($scope, $location, $http, $rootScope, $log, $document) {
+  $scope.APP_BASE_URL = 'http://13.234.59.233:8085/LighteningApp/api';
   $scope.signUpDetails = {
     username: '',
     pwd: '',
-    cpwd: '',
     phone: '',
-    paymentType: '',
     email: ''
 
   }
+  //$scope.phone=;
 
   $scope.saveSignUpData = function () {
-    $log.info('post-data' + JSON.stringify($scope.paymentDetail));
-    $http({
+  
+   $http({
       method: 'POST',
-      url: $scope.baseUrl + 'transaction ',
-      data: $scope.paymentDetail
+      url: $scope.APP_BASE_URL + '/register ',
+      data: $scope.signUpDetails
     }).then(function successCallback(response) {
       $log.info(response);
-      if (response.data.status) {
-        alert('Successfully Transaction ');
-        $location.path('/transctions');
+      alert(JSON.stringify(response));
+      if (response.xhrStatus =='complete') {
+        alert('Successfully Created user ');
+       // $location.path('/transctions');
       } else {
-        alert('Faled Transaction .');
+        //alert('Faled Transaction .');
       }
     }, function errorCallback(response) {
 
